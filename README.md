@@ -24,7 +24,6 @@ Developed from scratch using MATLAB Function Blocks, tested under uniform and pa
 /models               → Simulink models (.slx)
 /algorithms           → MPPT code (P&O, PSO)
 /hil-validation       → Typhoon HIL configs
-/embedded-code        → C2000 firmware
 /reports              → Plots, figures, experimental results
 ```
 

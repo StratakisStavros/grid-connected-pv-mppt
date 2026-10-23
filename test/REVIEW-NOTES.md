@@ -17,9 +17,15 @@ This is an additive presentation draft. It reorganizes access to existing work w
 
 The overview introduces the engineering problem in plain language, then connects modeling, control, implementation and real-time evaluation to concrete repository evidence. Selected parameters and the irradiance test profile are drawn from the thesis, with page references. Detailed implementation caveats remain in the supporting pages so a first-time reader can understand the project before inspecting its internals.
 
+## Engineering expansion
+
+The preview now includes three illustrated technical chapters covering the electrical plant, control derivation and tuning, and C2000/HIL integration. Twenty-one original embedded images were extracted from the English thesis without visual modification; their source pages, figure numbers and checksums are recorded in `assets/thesis/sources.json`.
+
+The tuning narrative and interface description were checked against the Greek text as well as the English edition. ADC assignments and selected calibration/rate-transition details were cross-checked against the existing controller model. The chapters distinguish thesis screenshots from saved-model settings and identify where a complete physical wiring schedule or tuning history is not supplied.
+
 ## Scope
 
-Every file introduced by this draft is inside `test/`. Figures and implementation files are linked from their original locations. The root README, existing folders, repository settings and original assets are unchanged.
+Every file introduced by this draft is inside `test/`. Existing result plots and implementation files are linked from their original locations. Extracted thesis screenshots are additional copies under `test/assets/thesis/`; both original PDFs are unchanged. The root README, existing folders, repository settings and original assets are unchanged.
 
 No simulations, code generation or HIL experiments were rerun. The preview was checked against the thesis text, the existing figures, standalone algorithm sources and embedded model metadata/code.
 

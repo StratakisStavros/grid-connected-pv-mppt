@@ -32,6 +32,8 @@ The uploaded current traces document the original experiments. This preview adds
 
 ## Source map
 
+For figure-by-figure explanations of tuning, channel assignments and controller implementation, see the [engineering walkthrough](engineering.md).
+
 | Topic | English thesis location |
 | :--- | :--- |
 | HIL platform and microcontroller | Chapter 5; controller discussion pp. 98–101 |

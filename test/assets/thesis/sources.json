@@ -1,0 +1,195 @@
+{
+  "source": "Diploma Thesis - English.pdf",
+  "extraction": "Embedded images extracted with pypdf; no visual edits, resizing or redrawing.",
+  "images": [
+    {
+      "file": "boost-control-structure.png",
+      "pdf_page": 72,
+      "figure": "31",
+      "pdf_image_object": "Image381.png",
+      "width": 635,
+      "height": 220,
+      "sha256": "3ee2aa96ce08df92754626bf15dd9234546494b3ed2c27ce27ed1a06915d7a2c"
+    },
+    {
+      "file": "pll-structure.png",
+      "pdf_page": 74,
+      "figure": "32",
+      "pdf_image_object": "Image384.png",
+      "width": 582,
+      "height": 182,
+      "sha256": "408fb8ee8b57b054b28c7301a3a0a89ce0bdf79eaf42df9fee9fd084377a98a0"
+    },
+    {
+      "file": "boost-pi-gains.png",
+      "pdf_page": 77,
+      "figure": "35",
+      "pdf_image_object": "Image392.png",
+      "width": 794,
+      "height": 589,
+      "sha256": "517123ec334ee7dfb70d57e8898f57d4a2d383fc4522842f858a97086f78ce0b"
+    },
+    {
+      "file": "pll-pi-gains.png",
+      "pdf_page": 78,
+      "figure": "36",
+      "pdf_image_object": "Image394.png",
+      "width": 806,
+      "height": 559,
+      "sha256": "b7ef7e0bb41f1a745edbbcc5614c4b3f6ce010774326c5f8564df0a0cb398ba0"
+    },
+    {
+      "file": "dq-current-pi-gains.png",
+      "pdf_page": 78,
+      "figure": "37",
+      "pdf_image_object": "Image395.png",
+      "width": 830,
+      "height": 566,
+      "sha256": "8b6a05afac0cae81c8fa864cbf23be9acb1ce532d6fe2b93966f8b3a195b0a4e"
+    },
+    {
+      "file": "voltage-pi-gains.png",
+      "pdf_page": 79,
+      "figure": "38",
+      "pdf_image_object": "Image397.png",
+      "width": 822,
+      "height": 566,
+      "sha256": "2e7b75c7ef55ad1fe405f7361104f0d907a512ef786ec5ff0c87296f53394e8c"
+    },
+    {
+      "file": "hil-power-stage.jpg",
+      "pdf_page": 93,
+      "figure": "48",
+      "pdf_image_object": "Image423.jpg",
+      "width": 1261,
+      "height": 386,
+      "sha256": "a683b5f5f5742ee722410cd474a5e535be1b51dfcd9c6f2d755553feb2b381f1"
+    },
+    {
+      "file": "hil-inverter-control.jpg",
+      "pdf_page": 95,
+      "figure": "49",
+      "pdf_image_object": "Image427.jpg",
+      "width": 852,
+      "height": 485,
+      "sha256": "1c534e78d0d0ebd0d44b66d12e77d380295539117cb22d4f8a0685fad0dfbc33"
+    },
+    {
+      "file": "hil-dq-current-control.png",
+      "pdf_page": 96,
+      "figure": "50",
+      "pdf_image_object": "Image430.png",
+      "width": 937,
+      "height": 505,
+      "sha256": "298e3e1fd6c619a29f0e269e386893ac695e57a53d6d0fd89d91f639c6203329"
+    },
+    {
+      "file": "c2000-adc-inputs.jpg",
+      "pdf_page": 96,
+      "figure": "51",
+      "pdf_image_object": "Image429.jpg",
+      "width": 1503,
+      "height": 601,
+      "sha256": "c52e10bf06ff8b78c7a2ccfadd4ea880fbda71f65b727200095724d575e513df"
+    },
+    {
+      "file": "c2000-adc-settings.png",
+      "pdf_page": 97,
+      "figure": "52",
+      "pdf_image_object": "Image433.png",
+      "width": 424,
+      "height": 565,
+      "sha256": "2abc74f4e4acfde9716003eae461d13fae5c9703418bd07bbe5201e2d810bac6"
+    },
+    {
+      "file": "c2000-boost-control.png",
+      "pdf_page": 97,
+      "figure": "53",
+      "pdf_image_object": "Image432.png",
+      "width": 792,
+      "height": 329,
+      "sha256": "436c7c5da74c40dd711937e2852a7034b5c59653c46ed712a0427519ca6125dc"
+    },
+    {
+      "file": "c2000-pwm-outputs.png",
+      "pdf_page": 98,
+      "figure": "54",
+      "pdf_image_object": "Image435.png",
+      "width": 720,
+      "height": 342,
+      "sha256": "cc37c925e05905461c0ea187720566abbbe1fe3a91240b7a79e4227c06b70018"
+    },
+    {
+      "file": "simulink-pv-boost.png",
+      "pdf_page": 102,
+      "figure": "56, DC portion",
+      "pdf_image_object": "Image441.png",
+      "width": 809,
+      "height": 208,
+      "sha256": "4ff3e4c48f2d1e88cdd44017f3db0da178e237e09bf35af41d64623cdeaa5c3f"
+    },
+    {
+      "file": "simulink-inverter-grid.png",
+      "pdf_page": 102,
+      "figure": "56, AC portion",
+      "pdf_image_object": "Image442.png",
+      "width": 653,
+      "height": 230,
+      "sha256": "a7b4f586cb2fdee3e0284093ef56f6719bbdf0e39bfac78cb08ae0ea414ab6cf"
+    },
+    {
+      "file": "pv-array-parameters.png",
+      "pdf_page": 103,
+      "figure": "57",
+      "pdf_image_object": "Image444.png",
+      "width": 944,
+      "height": 669,
+      "sha256": "4b0967fc3bbbea3ab90b5a94b07b2d19691e670a5ab2f433a5d6211476837a90"
+    },
+    {
+      "file": "simulink-boost-control.png",
+      "pdf_page": 104,
+      "figure": "58",
+      "pdf_image_object": "Image446.png",
+      "width": 394,
+      "height": 319,
+      "sha256": "9a4b39887e06f3fa5f2297f734c24fed06483b51f6cb55eb4aee272b6ace2c76"
+    },
+    {
+      "file": "simulink-dq-measurements.png",
+      "pdf_page": 105,
+      "figure": "59, measurement portion",
+      "pdf_image_object": "Image448.png",
+      "width": 270,
+      "height": 602,
+      "sha256": "6f57e35010cb20c3bc1b448d3b295f5ff561725cd398f05f590f444d205c2593"
+    },
+    {
+      "file": "simulink-inverter-control.png",
+      "pdf_page": 106,
+      "figure": "59, control portion",
+      "pdf_image_object": "Image450.png",
+      "width": 381,
+      "height": 468,
+      "sha256": "2114daed6bcd9ea8a1dc1e639de136ab084b1d3d3b9b74f967587090b0aee62c"
+    },
+    {
+      "file": "partial-shading-model.png",
+      "pdf_page": 112,
+      "figure": "61",
+      "pdf_image_object": "Image462.png",
+      "width": 1055,
+      "height": 564,
+      "sha256": "a9d021adc9b46ecc949a7a6c8a35cbacff56d7d2cd8b24c4cd7d01a9d5ba5d4f"
+    },
+    {
+      "file": "loss-objective-model.png",
+      "pdf_page": 113,
+      "figure": "62",
+      "pdf_image_object": "Image465.png",
+      "width": 803,
+      "height": 667,
+      "sha256": "8ba523ce62103bb636864ed288ab0d1442229ec2ab6a66acf869ea36192a6324"
+    }
+  ]
+}

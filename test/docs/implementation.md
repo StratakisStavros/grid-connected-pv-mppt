@@ -1,6 +1,8 @@
 # Implementation guide
 
-[← Project overview](../README.md)
+[← Project overview](../README.md) · [Illustrated engineering walkthrough](engineering.md)
+
+For the design rationale and original screenshots, see [control design and tuning](control-design.md) and [C2000/HIL integration](embedded-hil.md). This page indexes the implementation files and algorithm interfaces.
 
 ## Models and hardware assets
 

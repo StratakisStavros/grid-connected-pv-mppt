@@ -6,7 +6,7 @@ A partially shaded solar array can have several operating points that look optim
 
 This thesis investigates that problem through modeling, control implementation and real-time experiments. It compares two maximum power point tracking (MPPT) methods—Perturb & Observe (P&O) and Particle Swarm Optimization (PSO)—within a grid-connected photovoltaic (PV) system. Its central finding is that **maximizing PV terminal power and maximizing power after losses can select different operating points**.
 
-[Read the thesis in English](../Diploma%20Thesis%20-%20English.pdf) · [Greek edition](../Diploma%20Thesis%20-%20Greek.pdf) · [Results & evidence](docs/results.md) · [Explore the implementation](docs/implementation.md)
+[Read the thesis in English](../Diploma%20Thesis%20-%20English.pdf) · [Greek edition](../Diploma%20Thesis%20-%20Greek.pdf) · [Results & evidence](docs/results.md) · [Engineering walkthrough](docs/engineering.md)
 
 ## Engineering work demonstrated
 
@@ -19,7 +19,7 @@ This thesis investigates that problem through modeling, control implementation a
 
 The workflow moves from **characterizing the plant → implementing control → comparing scenarios → evaluating the controller in real time**. The repository includes the model files, algorithm sources, HIL assets and reported results behind that process.
 
-**For a quick review:** start with the result below, then open the [implementation guide](docs/implementation.md) for the code and model structure. The [full thesis](../Diploma%20Thesis%20-%20English.pdf) provides the derivations and experimental detail.
+**For a technical review:** start with the implementation screenshots below, then follow the [control design and tuning](docs/control-design.md) and [C2000/HIL signal chain](docs/embedded-hil.md). The [full thesis](../Diploma%20Thesis%20-%20English.pdf) provides the derivations and experimental detail.
 
 ## System and control
 
@@ -39,6 +39,26 @@ flowchart LR
 ```
 
 In the documented HIL setup, the power stage is simulated in real time. The LaunchPad controls the boost stage; the inverter control is implemented within the Typhoon HIL schematic. Hardware-in-the-loop (HIL) means the physical controller interacts with a simulated electrical plant, allowing its behavior to be evaluated in real time.
+
+## Inside the implementation
+
+![PV system implemented in Typhoon HIL Schematic Editor](assets/thesis/hil-power-stage.jpg)
+
+*Actual thesis implementation: PV source → boost → DC link → inverter → grid. Figure 48, p. 93.*
+
+The technical work extends from the converter equations to the controller interface: analytical PI tuning for the current loops, empirical tuning of the outer voltage loop, dq transformations and PLL synchronization, ADC acquisition, signal calibration, rate transitions and PWM generation.
+
+![C2000 ADC inputs and calibration for Vdc, Vpv and Ipv](assets/thesis/c2000-adc-inputs.jpg)
+
+*Figure 51, p. 96: the C2000 receives DC-link voltage on A_IN14, PV voltage on C_IN3 and PV current on B_IN3, each through a calibration subsystem.*
+
+| Technical walkthrough | What it shows |
+| :--- | :--- |
+| [Plant modeling and Simulink implementation](docs/engineering.md) | Array sizing, converter topology, partial-shading sweep and the loss objective |
+| [Control design and PI tuning](docs/control-design.md) | Averaged boost model, current-loop tuning equations, PLL, dq decoupling and the reported gain set |
+| [C2000 and HIL integration](docs/embedded-hil.md) | Feedback channels, ADC trigger settings, calibration, reference selection, rate transition, PWM and monitoring |
+
+The walkthrough includes **21 original thesis figures and screenshots**, with page references and links to the source models.
 
 ## Featured result: the objective matters
 
@@ -69,6 +89,7 @@ Three conclusions guide the work:
 
 | Start here | What you will find |
 | :--- | :--- |
+| [Engineering walkthrough](docs/engineering.md) | Plant models, control derivation, tuning and embedded/HIL implementation |
 | [Results & evidence](docs/results.md) | Selected simulation and HIL figures, scenario comparisons and thesis page references |
 | [Implementation guide](docs/implementation.md) | Exact model filenames, algorithm interfaces and embedded-control assets |
 | [Reproduction guide](docs/reproduction.md) | Saved model releases, a practical inspection workflow and rerun prerequisites |

@@ -4,7 +4,7 @@
 
 ## Read and inspect without the laboratory setup
 
-1. Read [the thesis](../../Diploma%20Thesis%20-%20English.pdf), especially Chapter 6 (models and characterization), Chapter 7 (results), and Chapter 5 (HIL platform).
+1. Read [the thesis](../Diploma%20Thesis%20-%20English.pdf), especially Chapter 6 (models and characterization), Chapter 7 (results), and Chapter 5 (HIL platform).
 2. Use the [results index](results.md#full-result-index) to compare original figures by scenario.
 3. Inspect the [algorithm interfaces and exact model filenames](implementation.md). Distinguish standalone examples from code embedded inside SLX models.
 
@@ -24,7 +24,7 @@ The repository provides project assets and result images; it does not provide an
 
 ## Recreate the controller HIL experiment
 
-Use the [Typhoon schematic](../../HIL-Validation/Schematic%20Model.tse), [SCADA panel](../../HIL-Validation/Scada.cus) and [embedded model](../../Models/pv_control.slx) together with Chapter 5 of the thesis.
+Use the [Typhoon schematic](../HIL-Validation/Schematic%20Model.tse), [SCADA panel](../HIL-Validation/Scada.cus) and [embedded model](../Models/pv_control.slx) together with Chapter 5 of the thesis.
 
 The documented setup uses Typhoon HIL402 and a TI Delfino F28379D LaunchPad. Before deployment, reconcile the actual analog scaling, pin assignments, PWM configuration, sample times and controller initialization across the files and the hardware. The selected Typhoon software must support the uploaded assets and HIL device; no specific compatible release has been verified in this presentation review.
 
@@ -44,4 +44,4 @@ For figure-by-figure explanations of tuning, channel assignments and controller 
 | HIL current responses | Section 7.3, pp. 136–140 |
 | Final conclusions and reported improvement | pp. 140–141 |
 
-All page references identify PDF pages of the uploaded English edition. Consult the [Greek edition](../../Diploma%20Thesis%20-%20Greek.pdf) alongside the English translation when reviewing the original wording.
+All page references identify PDF pages of the uploaded English edition. Consult the [Greek edition](../Diploma%20Thesis%20-%20Greek.pdf) alongside the English translation when reviewing the original wording.

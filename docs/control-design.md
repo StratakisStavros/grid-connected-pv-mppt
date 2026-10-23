@@ -107,4 +107,4 @@ The embedded controller also uses discrete-time blocks, so the continuous-time g
 
 The thesis evaluates the control as part of the complete system: PV current follows irradiance changes, the DC link approaches its target, and reactive power averages near zero in the reported simulations. These observations support the combined control/MPPT behavior. They are not isolated loop-identification measurements.
 
-[Uniform-irradiance response](results.md#baseline-tracking-changes-in-sunlight) · [Partial-shading comparison](results.md#2-dynamic-simulation-loss-aware-pso) · [Full derivation, Chapter 4](../../Diploma%20Thesis%20-%20English.pdf#page=71)
+[Uniform-irradiance response](results.md#baseline-tracking-changes-in-sunlight) · [Partial-shading comparison](results.md#2-dynamic-simulation-loss-aware-pso) · [Full derivation, Chapter 4](../Diploma%20Thesis%20-%20English.pdf#page=71)

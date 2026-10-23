@@ -2,7 +2,7 @@
 
 [Project overview](../../README.md) · [Engineering walkthrough](../../docs/engineering.md)
 
-These images were extracted directly from the embedded image objects in the [English thesis](../../../Diploma%20Thesis%20-%20English.pdf). They retain their original pixel dimensions and have not been visually edited, redrawn or upscaled. The original PDF remains unchanged.
+These images were extracted directly from the embedded image objects in the [English thesis](../../Diploma%20Thesis%20-%20English.pdf). They retain their original pixel dimensions and have not been visually edited, redrawn or upscaled. The original PDF remains unchanged.
 
 The image order inside a PDF page can differ from its reading order; the figure assignments below were checked against the displayed pages. Figures 56 and 59 span multiple image portions. Some original screenshots are low-resolution; opening an image separately exposes all available detail without implying additional resolution.
 

@@ -41,7 +41,7 @@ The thesis describes **three analog feedback signals and one digital switching c
 
 *Figure 50, p. 96. Two PI branches, coupling terms and modulation scaling are exposed inside the current-controller subsystem.*
 
-The SCADA reference allows voltage-reference changes during operation, while probes expose the control variables. The repository includes the [schematic](../../HIL-Validation/Schematic%20Model.tse) and [SCADA configuration](../../HIL-Validation/Scada.cus); the screenshots above are the actual PV-system diagrams from the thesis.
+The SCADA reference allows voltage-reference changes during operation, while probes expose the control variables. The repository includes the [schematic](../HIL-Validation/Schematic%20Model.tse) and [SCADA configuration](../HIL-Validation/Scada.cus); the screenshots above are the actual PV-system diagrams from the thesis.
 
 ## 2. Acquire and scale the feedback signals
 
@@ -117,7 +117,7 @@ These quantities describe different parts of the system. A simulation step is no
 
 ## 5. Model details behind the screenshots
 
-Static inspection of the original [pv_control.slx](../../Models/pv_control.slx) adds useful implementation detail without modifying or executing it:
+Static inspection of the original [pv_control.slx](../Models/pv_control.slx) adds useful implementation detail without modifying or executing it:
 
 - **Target:** TI Delfino F28379D LaunchPad, with the `ert.tlc` code-generation target.
 - **ADC channels:** the three named feedback channels match Figure 51. Their configured SOC selections are A/SOC5, C/SOC4 and B/SOC3, all using `ePWM2_ADCSOCA` in the saved model.
@@ -150,4 +150,4 @@ The reported HIL tests compare P&O and PSO with uniform irradiance and partial s
 
 The engineering evidence covers acquisition, scaling, reference selection, rate handling, regulation, PWM and observation. The PDF supplies block-level connections and controller settings; it does not supply a complete laboratory wiring schedule, calibration procedure, tuning iteration log or measured firmware timing report. The distinction keeps the presentation useful for technical discussion while preserving the scope of the published work.
 
-[English thesis, experiment implementation](../../Diploma%20Thesis%20-%20English.pdf#page=93) · [Greek edition](../../Diploma%20Thesis%20-%20Greek.pdf#page=93) · [Image provenance](../assets/thesis/README.md)
+[English thesis, experiment implementation](../Diploma%20Thesis%20-%20English.pdf#page=93) · [Greek edition](../Diploma%20Thesis%20-%20Greek.pdf#page=93) · [Image provenance](../assets/thesis/README.md)

@@ -18,7 +18,7 @@ Before comparing shaded operating points, the thesis evaluates the system under 
 
 For the P&O case without loss correction, the thesis reports PV current near **30 A, 38 A and 34 A** at the corresponding irradiance levels (p. 119). It also reports regulation of the DC link to **1200 V** and reactive power around zero. This baseline checks how tracking and the surrounding control respond as available solar power changes.
 
-[Original PV-current plot](../../Reports/MATLAB-NO%20SHADING/P%26O%20NO%20LOSSES/P%26O%20No%20Losses%20I-t.png) · [Original DC-link plot](../../Reports/MATLAB-NO%20SHADING/P%26O%20NO%20LOSSES/P%26O%20No%20Losses%20DC%20LINK%20V-t.png) · [Thesis, scenario definition](../../Diploma%20Thesis%20-%20English.pdf#page=116)
+[Original PV-current plot](../Reports/MATLAB-NO%20SHADING/P%26O%20NO%20LOSSES/P%26O%20No%20Losses%20I-t.png) · [Original DC-link plot](../Reports/MATLAB-NO%20SHADING/P%26O%20NO%20LOSSES/P%26O%20No%20Losses%20DC%20LINK%20V-t.png) · [Thesis, scenario definition](../Diploma%20Thesis%20-%20English.pdf#page=116)
 
 ## 1. Partial shading changes the optimization problem
 
@@ -31,13 +31,13 @@ The thesis compares a PV-power characteristic with a loss-corrected characterist
 
 These are rounded values reported on **thesis p. 115**, for the static characterization study. They are not the grid-power values of the dynamic comparison below. The loss approximation contains a term proportional to current squared, which penalizes high-current operation.
 
-![Original P–V characteristics under partial shading](../../Reports/Char/Partial%20Shadind/P-V%20Characteristics%20Partial%20Shading.png)
+![Original P–V characteristics under partial shading](../Reports/Char/Partial%20Shadind/P-V%20Characteristics%20Partial%20Shading.png)
 
-[Static characteristic files](../../Reports/Char/Partial%20Shadind) · [English thesis](../../Diploma%20Thesis%20-%20English.pdf#page=115)
+[Static characteristic files](../Reports/Char/Partial%20Shadind) · [English thesis](../Diploma%20Thesis%20-%20English.pdf#page=115)
 
 ## 2. Dynamic simulation: loss-aware PSO
 
-![Original real-power comparison for the two PSO objectives](../../Reports/MATLAB-PARTIAL%20SHADING/PSO-%20LOSSES%20INCLUDED/PSO%20LOSSES%20REAL%20POWER.png)
+![Original real-power comparison for the two PSO objectives](../Reports/MATLAB-PARTIAL%20SHADING/PSO-%20LOSSES%20INCLUDED/PSO%20LOSSES%20REAL%20POWER.png)
 
 The uploaded comparison shows higher real power for the loss-aware objective. The thesis describes operating currents of approximately **45 A** for the PV-power objective and **28 A** for the loss-aware objective (pp. 130–135). The latter favors a higher-voltage, lower-current region.
 
@@ -54,13 +54,13 @@ The thesis summarizes the benefit as **up to 5%** (pp. 140–141). Its narrative
 
 The captions “without losses” and “with losses” are best read here as **excluding or including losses in the MPPT objective**. They should not be interpreted as proof that the entire simulated plant is physically lossless in the first case.
 
-[PSO, PV-power objective](../../Reports/MATLAB-PARTIAL%20SHADING/PSO-%20NO%20LOSSES) · [PSO, loss-aware objective and comparison](../../Reports/MATLAB-PARTIAL%20SHADING/PSO-%20LOSSES%20INCLUDED)
+[PSO, PV-power objective](../Reports/MATLAB-PARTIAL%20SHADING/PSO-%20NO%20LOSSES) · [PSO, loss-aware objective and comparison](../Reports/MATLAB-PARTIAL%20SHADING/PSO-%20LOSSES%20INCLUDED)
 
 ## 3. Controller hardware-in-the-loop
 
 The experiments combine **Typhoon HIL402** with a **TI Delfino F28379D LaunchPad**. The physical controller receives feedback from the simulated plant and returns the boost switching command. The five uploaded experimental plots record **PV current versus time**, allowing the tracking trajectory and final operating region to be compared.
 
-[Controller connections, ADC acquisition and PWM implementation](embedded-hil.md) · [Original experimental files](../../Reports/Experimental%20Results)
+[Controller connections, ADC acquisition and PWM implementation](embedded-hil.md) · [Original experimental files](../Reports/Experimental%20Results)
 
 ### Experimental comparison matrix
 
@@ -76,7 +76,7 @@ The explicit experimental **loss-treatment comparison is E4 versus E5**. The col
 
 ### E1. P&O under uniform irradiance
 
-![E1: experimental P&O PV-current response under uniform irradiance](../../Reports/Experimental%20Results/P%26O%20NO%20SHADING%20I-t.png)
+![E1: experimental P&O PV-current response under uniform irradiance](../Reports/Experimental%20Results/P%26O%20NO%20SHADING%20I-t.png)
 
 **Test condition.** The thesis describes the irradiance sequence **800 → 1000 → 900 W/m²**, with no partial shading.
 
@@ -84,11 +84,11 @@ The explicit experimental **loss-treatment comparison is E4 versus E5**. The col
 
 **Engineering interpretation.** In this reported uniform-irradiance test, local tracking is sufficient to follow the changing operating point. This is a useful baseline for judging whether a more complex search strategy improves the response.
 
-[Original figure](../../Reports/Experimental%20Results/P%26O%20NO%20SHADING%20I-t.png) · [Thesis discussion, p. 136](../../Diploma%20Thesis%20-%20English.pdf#page=136)
+[Original figure](../Reports/Experimental%20Results/P%26O%20NO%20SHADING%20I-t.png) · [Thesis discussion, p. 136](../Diploma%20Thesis%20-%20English.pdf#page=136)
 
 ### E2. PSO under uniform irradiance
 
-![E2: experimental PSO PV-current response under uniform irradiance](../../Reports/Experimental%20Results/PSO%20NO%20SHADING%20I-t.png)
+![E2: experimental PSO PV-current response under uniform irradiance](../Reports/Experimental%20Results/PSO%20NO%20SHADING%20I-t.png)
 
 **Test condition.** The same irradiance sequence is evaluated using PSO.
 
@@ -98,11 +98,11 @@ The explicit experimental **loss-treatment comparison is E4 versus E5**. The col
 
 The five-second offline ramp schedule described earlier belongs to the simulation study. The experimental images show their own startup and transition timing; they are not treated as time-aligned repetitions of those simulation plots.
 
-[Original figure](../../Reports/Experimental%20Results/PSO%20NO%20SHADING%20I-t.png) · [Thesis discussion, p. 137](../../Diploma%20Thesis%20-%20English.pdf#page=137)
+[Original figure](../Reports/Experimental%20Results/PSO%20NO%20SHADING%20I-t.png) · [Thesis discussion, p. 137](../Diploma%20Thesis%20-%20English.pdf#page=137)
 
 ### E3. P&O under partial shading
 
-![E3: experimental P&O PV-current response under partial shading](../../Reports/Experimental%20Results/P%26O%20PARTIAL%20SHADING%20I-t.png)
+![E3: experimental P&O PV-current response under partial shading](../Reports/Experimental%20Results/P%26O%20PARTIAL%20SHADING%20I-t.png)
 
 **Test condition.** Partial shading introduces multiple candidate power peaks.
 
@@ -112,11 +112,11 @@ The five-second offline ramp schedule described earlier belongs to the simulatio
 
 The endpoint is close to that of loss-aware PSO in E5. That similarity does **not** establish equivalent search behavior or prove that P&O selected an inferior net-power point in this particular trace. The thesis's simulation discussion also notes a case where the first peak happens to be favorable (p. 127). The important distinction is how the point is selected, not a blanket claim that P&O must always finish at the wrong point.
 
-[Original figure](../../Reports/Experimental%20Results/P%26O%20PARTIAL%20SHADING%20I-t.png) · [Thesis discussion, p. 138](../../Diploma%20Thesis%20-%20English.pdf#page=138)
+[Original figure](../Reports/Experimental%20Results/P%26O%20PARTIAL%20SHADING%20I-t.png) · [Thesis discussion, p. 138](../Diploma%20Thesis%20-%20English.pdf#page=138)
 
 ### E4. PSO under partial shading: PV-power objective
 
-![E4: experimental PSO response under partial shading with losses excluded from the objective](../../Reports/Experimental%20Results/PSO%20PARTIAL%20SHADING%20NO%20LOSSES%20I-t.png)
+![E4: experimental PSO response under partial shading with losses excluded from the objective](../Reports/Experimental%20Results/PSO%20PARTIAL%20SHADING%20NO%20LOSSES%20I-t.png)
 
 **Test condition.** PSO evaluates PV terminal power without the loss correction used in E5.
 
@@ -124,11 +124,11 @@ The endpoint is close to that of loss-aware PSO in E5. That similarity does **no
 
 **Engineering interpretation.** The search moves beyond the initial region, unlike the displayed P&O trajectory. However, its objective favors the higher-current PV-power peak. The characteristic and simulation studies show why that choice can be less favorable after current-dependent conversion losses are considered.
 
-[Original figure](../../Reports/Experimental%20Results/PSO%20PARTIAL%20SHADING%20NO%20LOSSES%20I-t.png) · [Thesis discussion, p. 139](../../Diploma%20Thesis%20-%20English.pdf#page=139)
+[Original figure](../Reports/Experimental%20Results/PSO%20PARTIAL%20SHADING%20NO%20LOSSES%20I-t.png) · [Thesis discussion, p. 139](../Diploma%20Thesis%20-%20English.pdf#page=139)
 
 ### E5. PSO under partial shading: loss-aware objective
 
-![E5: experimental PSO response under partial shading with losses included in the objective](../../Reports/Experimental%20Results/PSO%20PARTIAL%20SHADING%20LOSSES%20I-t.png)
+![E5: experimental PSO response under partial shading with losses included in the objective](../Reports/Experimental%20Results/PSO%20PARTIAL%20SHADING%20LOSSES%20I-t.png)
 
 **Test condition.** The PSO objective incorporates the loss estimate, changing the ranking of candidate operating points.
 
@@ -136,7 +136,7 @@ The endpoint is close to that of loss-aware PSO in E5. That similarity does **no
 
 **Engineering interpretation.** This agrees with the lower-current operating region favored by the loss-corrected characteristic and dynamic comparison. The displayed current trace identifies the endpoint; the wider interpretation of that endpoint as the preferred loss-aware peak comes from the characteristic and power studies, not current alone.
 
-[Original figure](../../Reports/Experimental%20Results/PSO%20PARTIAL%20SHADING%20LOSSES%20I-t.png) · [Thesis discussion, p. 140](../../Diploma%20Thesis%20-%20English.pdf#page=140)
+[Original figure](../Reports/Experimental%20Results/PSO%20PARTIAL%20SHADING%20LOSSES%20I-t.png) · [Thesis discussion, p. 140](../Diploma%20Thesis%20-%20English.pdf#page=140)
 
 ### What changes with the algorithm, shading and losses?
 
@@ -159,11 +159,11 @@ The endpoint is close to that of loss-aware PSO in E5. That similarity does **no
 
 | Study | Original files |
 | :--- | :--- |
-| Uniform-irradiance I–V / P–V characteristics | [Characteristic sweeps](../../Reports/Char/No%20Shading) |
-| Partial-shading I–V / P–V characteristics | [Characteristic sweeps](../../Reports/Char/Partial%20Shadind) |
-| Uniform irradiance, P&O with PV-power objective | [Simulation results](../../Reports/MATLAB-NO%20SHADING/P%26O%20NO%20LOSSES) |
-| Uniform irradiance, P&O with loss-aware objective | [Simulation results](../../Reports/MATLAB-NO%20SHADING/P%26O%20LOSSES%20INCLUDED) |
-| Partial shading, P&O | [Simulation results](../../Reports/MATLAB-PARTIAL%20SHADING/P%26O%20NO%20LOSSES) |
-| Partial shading, PSO with PV-power objective | [Simulation results](../../Reports/MATLAB-PARTIAL%20SHADING/PSO-%20NO%20LOSSES) |
-| Partial shading, PSO with loss-aware objective | [Simulation results](../../Reports/MATLAB-PARTIAL%20SHADING/PSO-%20LOSSES%20INCLUDED) |
-| Controller HIL experiments | [Experimental results](../../Reports/Experimental%20Results) |
+| Uniform-irradiance I–V / P–V characteristics | [Characteristic sweeps](../Reports/Char/No%20Shading) |
+| Partial-shading I–V / P–V characteristics | [Characteristic sweeps](../Reports/Char/Partial%20Shadind) |
+| Uniform irradiance, P&O with PV-power objective | [Simulation results](../Reports/MATLAB-NO%20SHADING/P%26O%20NO%20LOSSES) |
+| Uniform irradiance, P&O with loss-aware objective | [Simulation results](../Reports/MATLAB-NO%20SHADING/P%26O%20LOSSES%20INCLUDED) |
+| Partial shading, P&O | [Simulation results](../Reports/MATLAB-PARTIAL%20SHADING/P%26O%20NO%20LOSSES) |
+| Partial shading, PSO with PV-power objective | [Simulation results](../Reports/MATLAB-PARTIAL%20SHADING/PSO-%20NO%20LOSSES) |
+| Partial shading, PSO with loss-aware objective | [Simulation results](../Reports/MATLAB-PARTIAL%20SHADING/PSO-%20LOSSES%20INCLUDED) |
+| Controller HIL experiments | [Experimental results](../Reports/Experimental%20Results) |

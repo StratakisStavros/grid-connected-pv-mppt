@@ -16,7 +16,7 @@ The DC side contains the PV array, series resistance/inductance, controlled boos
 
 This decomposition makes the interfaces explicit: MPPT determines the desired PV current, the boost loop controls that current, and the grid-side loops regulate the inverter operating point. The full simulation described on p. 103 uses a **10 µs discrete step**.
 
-[Open the full grid model](../../Models/pv_grid_control_fullmodel.slx).
+[Open the full grid model](../Models/pv_grid_control_fullmodel.slx).
 
 ### Array parameterization and nominal operating point
 
@@ -51,7 +51,7 @@ The screenshot uses a **1 µs** discrete step for this characterization model. T
 
 The sweep establishes where the candidate peaks lie before evaluating an MPPT algorithm. This provides a reference against which to interpret convergence: reaching a stable point alone does not show that the selected peak is the best one.
 
-[Open the bypass-characteristic model](../../Models/pv_Bypass_characteristic.slx) · [View the characteristic results](results.md#1-partial-shading-changes-the-optimization-problem).
+[Open the bypass-characteristic model](../Models/pv_Bypass_characteristic.slx) · [View the characteristic results](results.md#1-partial-shading-changes-the-optimization-problem).
 
 ## 3. Put conversion losses into the objective
 
@@ -89,11 +89,11 @@ The experiment divides responsibility across the two platforms: the LaunchPad su
 
 | Engineering stage | Primary thesis evidence | Repository artifact |
 | :--- | :--- | :--- |
-| Plant modeling | Chapter 3; Figures 56–57, pp. 102–103 | [Full-system model](../../Models/pv_grid_control_fullmodel.slx) |
-| Characterization and loss objective | Figures 61–62, pp. 112–115 | [Characteristic model](../../Models/pv_Bypass_characteristic.slx) |
+| Plant modeling | Chapter 3; Figures 56–57, pp. 102–103 | [Full-system model](../Models/pv_grid_control_fullmodel.slx) |
+| Characterization and loss objective | Figures 61–62, pp. 112–115 | [Characteristic model](../Models/pv_Bypass_characteristic.slx) |
 | Feedback design and gains | Chapter 4, pp. 71–79 | [Control design walkthrough](control-design.md) |
-| Embedded implementation | Figures 51–54, pp. 96–99 | [C2000 controller model](../../Models/pv_control.slx) |
-| Real-time plant and monitoring | Figures 48–50, pp. 93–96 | [HIL schematic](../../HIL-Validation/Schematic%20Model.tse), [SCADA file](../../HIL-Validation/Scada.cus) |
+| Embedded implementation | Figures 51–54, pp. 96–99 | [C2000 controller model](../Models/pv_control.slx) |
+| Real-time plant and monitoring | Figures 48–50, pp. 93–96 | [HIL schematic](../HIL-Validation/Schematic%20Model.tse), [SCADA file](../HIL-Validation/Scada.cus) |
 | Performance comparison | Chapter 7, pp. 116–141 | [Results and original traces](results.md) |
 
-[English thesis](../../Diploma%20Thesis%20-%20English.pdf) · [Greek thesis](../../Diploma%20Thesis%20-%20Greek.pdf) · [Image provenance](../assets/thesis/README.md)
+[English thesis](../Diploma%20Thesis%20-%20English.pdf) · [Greek thesis](../Diploma%20Thesis%20-%20Greek.pdf) · [Image provenance](../assets/thesis/README.md)

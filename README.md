@@ -98,4 +98,4 @@ Three conclusions guide the work:
 
 **Technical scope:** MATLAB/Simulink · PV modeling · DC–DC conversion · grid-connected inverters · MPPT · P&O · PSO · TI C2000 · Typhoon HIL.
 
-[Previous presentation & archive](archive/legacy-presentation/README.md) · [Repository license](LICENSE)
+[Repository license](LICENSE)

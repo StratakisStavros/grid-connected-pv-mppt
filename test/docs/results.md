@@ -4,6 +4,22 @@
 
 The following findings come from the uploaded thesis and figures. This presentation does not introduce new simulations, hardware measurements or numerical benchmarks. Page references use the English PDF page numbers.
 
+## Baseline: tracking changes in sunlight
+
+Before comparing shaded operating points, the thesis evaluates the system under uniform irradiance with a changing sunlight level. The five-second simulation uses the following profile (p. 116):
+
+| Time | Irradiance |
+| :--- | :--- |
+| 0–1 s | 800 W/m² |
+| 1–2 s | Ramp from 800 to 1000 W/m² |
+| 2–3 s | Hold at 1000 W/m² |
+| 3–4 s | Ramp down to 900 W/m² |
+| 4–5 s | Hold at 900 W/m² |
+
+For the P&O case without loss correction, the thesis reports PV current near **30 A, 38 A and 34 A** at the corresponding irradiance levels (p. 119). It also reports regulation of the DC link to **1200 V** and reactive power around zero. This baseline checks how tracking and the surrounding control respond as available solar power changes.
+
+[Original PV-current plot](../../Reports/MATLAB-NO%20SHADING/P%26O%20NO%20LOSSES/P%26O%20No%20Losses%20I-t.png) · [Original DC-link plot](../../Reports/MATLAB-NO%20SHADING/P%26O%20NO%20LOSSES/P%26O%20No%20Losses%20DC%20LINK%20V-t.png) · [Thesis, scenario definition](../../Diploma%20Thesis%20-%20English.pdf#page=116)
+
 ## 1. Partial shading changes the optimization problem
 
 The thesis compares a PV-power characteristic with a loss-corrected characteristic. Two peaks are close in PV power, but their ordering changes after the current-dependent loss term is included.
@@ -24,6 +40,15 @@ These are rounded values reported on **thesis p. 115**, for the static character
 ![Original real-power comparison for the two PSO objectives](../../Reports/MATLAB-PARTIAL%20SHADING/PSO-%20LOSSES%20INCLUDED/PSO%20LOSSES%20REAL%20POWER.png)
 
 The uploaded comparison shows higher real power for the loss-aware objective. The thesis describes operating currents of approximately **45 A** for the PV-power objective and **28 A** for the loss-aware objective (pp. 130–135). The latter favors a higher-voltage, lower-current region.
+
+| MPPT objective | Approximate PV current | Approximate PV voltage |
+| :--- | :--- | :--- |
+| PV terminal power | 45 A | 275 V |
+| Loss-aware power | 28 A | 410 V |
+
+These values follow the comparison on **p. 135**. The preceding discussion on p. 132 rounds the loss-aware voltage to 420 V, so the values identify operating regions rather than exact setpoints. Multiplying PV voltage by PV current gives terminal power, not the grid-side real power shown in the comparison plot.
+
+The engineering lesson is practical: **a broader search algorithm is only useful when its objective represents the quantity the system should optimize**. Here, accounting for current-dependent losses changes which operating region is preferred.
 
 The thesis summarizes the benefit as **up to 5%** (pp. 140–141). Its narrative uses rounded power values, while the uploaded curves show ripple and somewhat different plotted levels; the headline is therefore attributed to the thesis, rather than presented as a newly calculated measurement from these images. Raw time-series exports are not part of the uploaded result collection.
 

@@ -2,22 +2,24 @@
 
 **Stavros Stratakis · Diploma thesis · Power electronics & embedded control**
 
-How do you find the best operating point of a photovoltaic system when shading creates multiple power peaks—and converter losses change which peak is most useful?
+A partially shaded solar array can have several operating points that look optimal. Choosing the point with the highest panel power does not necessarily deliver the most useful power to the grid, because conversion losses also matter.
 
-This project combines photovoltaic and converter modeling, Perturb & Observe (P&O) and Particle Swarm Optimization (PSO), grid-side control, and controller hardware-in-the-loop experiments. Its central finding is that **maximizing PV terminal power and maximizing power after losses can select different operating points**.
+This thesis investigates that problem through modeling, control implementation and real-time experiments. It compares two maximum power point tracking (MPPT) methods—Perturb & Observe (P&O) and Particle Swarm Optimization (PSO)—within a grid-connected photovoltaic (PV) system. Its central finding is that **maximizing PV terminal power and maximizing power after losses can select different operating points**.
 
 [Read the thesis in English](../Diploma%20Thesis%20-%20English.pdf) · [Greek edition](../Diploma%20Thesis%20-%20Greek.pdf) · [Results & evidence](docs/results.md) · [Explore the implementation](docs/implementation.md)
 
-> **Preview edition.** This folder offers an alternative presentation of the existing thesis repository. All models, algorithms, reports and thesis PDFs remain in their original locations.
+## Engineering work demonstrated
 
-## At a glance
+| Area | Work in the thesis | Explore the evidence |
+| :--- | :--- | :--- |
+| **System modeling** | Model the PV array, boost converter and grid-connected inverter; extract I–V and P–V characteristics to identify candidate operating points | [Models and source files](docs/implementation.md#models-and-hardware-assets) |
+| **Control design** | Combine MPPT current references with boost current control, inverter voltage/current loops and PLL synchronization | Thesis pp. 104–106; [system overview](#system-and-control) |
+| **Algorithm implementation** | Implement and compare P&O and PSO using PV-power and loss-aware objectives | [MATLAB functions and interfaces](docs/implementation.md#algorithm-interfaces) |
+| **Experimental evaluation** | Compare simulation behavior with controller hardware-in-the-loop current traces using TI C2000 and Typhoon HIL | [HIL scenarios and traces](docs/results.md#3-controller-hardware-in-the-loop) |
 
-| Engineering question | Work documented in the repository |
-| :--- | :--- |
-| How does shading affect the PV operating point? | I–V and P–V characterization, including bypass diodes and multiple power peaks |
-| How should the operating point be selected? | Current-reference P&O and PSO, with PV-power and loss-aware objectives |
-| How is the array connected to the grid? | Boost converter, DC link, inverter, synchronization and current control |
-| Does the control behavior carry over to real time? | Typhoon HIL402 experiments with a TI Delfino F28379D LaunchPad |
+The workflow moves from **characterizing the plant → implementing control → comparing scenarios → evaluating the controller in real time**. The repository includes the model files, algorithm sources, HIL assets and reported results behind that process.
+
+**For a quick review:** start with the result below, then open the [implementation guide](docs/implementation.md) for the code and model structure. The [full thesis](../Diploma%20Thesis%20-%20English.pdf) provides the derivations and experimental detail.
 
 ## System and control
 
@@ -36,7 +38,7 @@ flowchart LR
     CTRL -. Switching commands .-> INV
 ```
 
-In the documented HIL setup, the power stage is simulated in real time. The LaunchPad controls the boost stage; the inverter control is implemented within the Typhoon HIL schematic. This provides a bridge between offline simulation and embedded control evaluation.
+In the documented HIL setup, the power stage is simulated in real time. The LaunchPad controls the boost stage; the inverter control is implemented within the Typhoon HIL schematic. Hardware-in-the-loop (HIL) means the physical controller interacts with a simulated electrical plant, allowing its behavior to be evaluated in real time.
 
 ## Featured result: the objective matters
 
@@ -45,6 +47,17 @@ In the documented HIL setup, the power stage is simulated in real time. The Laun
 *Original repository figure, reproduced by reference. The legend's “Losses” and “No Losses” distinguish the MPPT objective used in the comparison.*
 
 The loss-aware case selects a lower-current operating region and produces higher real power in this partial-shading comparison. The thesis reports an improvement of **up to approximately 5% in the studied cases**; this is a scenario-specific result, not a guaranteed gain under all operating conditions. [See the evidence and interpretation](docs/results.md).
+
+### Selected study details
+
+| Detail | Reported value | Context |
+| :--- | :--- | :--- |
+| DC-link voltage target | **1200 V** | Grid-connected simulation; thesis pp. 103, 119 |
+| Offline discrete simulation step | **10 µs** | Model described on p. 103; not a claimed controller execution time |
+| Uniform-irradiance test | **800 → 1000 → 900 W/m²** | Five-second simulation with ramps; p. 116 |
+| PSO operating-current comparison | **≈45 A → ≈28 A** | PV-power versus loss-aware objective under the studied partial shading; p. 135 |
+
+[See the test profile, numerical context and source references](docs/results.md).
 
 Three conclusions guide the work:
 
@@ -64,4 +77,4 @@ Three conclusions guide the work:
 
 **Technical scope:** MATLAB/Simulink · PV modeling · DC–DC conversion · grid-connected inverters · MPPT · P&O · PSO · TI C2000 · Typhoon HIL.
 
-[About this preview](REVIEW-NOTES.md) · [Repository license](../LICENSE)
+[Preview edition — scope and review notes](REVIEW-NOTES.md) · [Repository license](../LICENSE)

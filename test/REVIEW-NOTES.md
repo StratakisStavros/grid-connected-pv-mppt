@@ -13,6 +13,10 @@ This is an additive presentation draft. It reorganizes access to existing work w
 - Explains the current-reference algorithm interface and the difference between standalone functions and embedded model code.
 - Attributes quantitative findings to the thesis and limits conclusions to the reported scenarios.
 
+## Portfolio reading path
+
+The overview introduces the engineering problem in plain language, then connects modeling, control, implementation and real-time evaluation to concrete repository evidence. Selected parameters and the irradiance test profile are drawn from the thesis, with page references. Detailed implementation caveats remain in the supporting pages so a first-time reader can understand the project before inspecting its internals.
+
 ## Scope
 
 Every file introduced by this draft is inside `test/`. Figures and implementation files are linked from their original locations. The root README, existing folders, repository settings and original assets are unchanged.
